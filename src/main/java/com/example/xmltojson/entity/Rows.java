@@ -5,9 +5,12 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.*;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @JacksonXmlRootElement(localName = "Rows")
+@Data
+@XmlRootElement
 public class Rows {
     @JacksonXmlProperty(localName = "Row")
     @JacksonXmlElementWrapper(useWrapping = false)
